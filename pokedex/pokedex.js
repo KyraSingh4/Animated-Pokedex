@@ -3,36 +3,51 @@ document.getElementById("eevee-stats").style = "display:none"
 document.getElementById("pidge").style = "display:none"
 document.getElementById("pidge-stats").style = "display:none"
 
-function chooseEevee(iChooseYou) {
-    document.getElementById("pidge").style = "display:none"
-    if (iChooseYou == 0) {
-        document.getElementById("eevee").style = "display:block"
-        document.getElementById("eevee-stats").style = "margin-top: -490px"
-    } else {
-        document.getElementById("eevee").style = "display:none"
-    }
-}
+var choose = null
 
-function choosePidge(iChooseYou) {
-    document.getElementById("eevee").style = "display:none"
-    document.getElementById("eevee-stats").style = "display:none"
-    if (iChooseYou == 0) {
-        document.getElementById("pidge").style = 
-        "display:block;"
-    } else {
+// Choose a pokemon from the buttons
+function choosePokemon(choose) {
+    if (choose == eevee) {
         document.getElementById("pidge").style = "display:none"
-    }
+        document.getElementById("eevee").style = "display:block"
+    } else if (choose == pidge) {
+        document.getElementById("eevee").style = "display:none"
+        document.getElementById("pidge").style = "display:block"
+    } 
 }
 
-function stats() {
-    var choose = chooseEevee(iChooseYou)
-    if (iChooseYou == 0){
-        document.getElementById("eevee-stats").style = "display:block"
-    } else if (iChooseYou == 1) {
-        document.getElementById("pidge-stats").style = "display:block"
-    }
-}
 
+// function chooseEevee(iChooseYou) {
+//     document.getElementById("pidge").style = "display:none"
+//     if (iChooseYou == 0) {
+//         document.getElementById("eevee").style = "display:block"
+//         document.getElementById("eevee-stats").style = "margin-top: -490px"
+//     } else {
+//         document.getElementById("eevee").style = "display:none"
+//     }
+// }
+
+// function choosePidge(iChooseYou) {
+//     document.getElementById("eevee").style = "display:none"
+//     document.getElementById("eevee-stats").style = "display:none"
+//     if (iChooseYou == 0) {
+//         document.getElementById("pidge").style = 
+//         "display:block;"
+//     } else {
+//         document.getElementById("pidge").style = "display:none"
+//     }
+// }
+
+// function to show stats based on the Pokemon
+statsBtn = document.getElementById("stats-btn")
+statsBtn.addEventListener("click", () => {
+    document.getElementById("eevee-stats").style = "display:block"
+})
+    
+
+
+
+// changes the gif to attack gif
 function attack(attack) {
     var eeveeImage
     var pidgeImage
@@ -49,6 +64,7 @@ function attack(attack) {
     document.getElementById("pidge").src = pidgeImage
 }
 
+// changes from the attack gif to the idle gif
 function standStill() {
   eeveeImage = "pokemon/eevee/eevee.gif"
   document.getElementById("eevee").src = eeveeImage
