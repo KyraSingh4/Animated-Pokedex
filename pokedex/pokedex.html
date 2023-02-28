@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <div class="choose-pkmn" onclick="chooseEevee(0)">
+    <div class="choose-pkmn" onclick="choosePokemon(eevee)">
         <img id="eevee-btn" src="pokemon/eevee/eevee-button.png">
         <p class="pokemon-name">Eevee</p>
     </div>
-    <div onclick="choosePidge(0)">
+    <div onclick="choosePokemon(pidge)">
         <div id="choose-pidge" class="choose-pkmn">
             <img id="pidge-btn" src="pokemon/pidgeotto/pidge-btn.png">
             <p class="pokemon-name">Pidgeotto</p>
@@ -27,6 +27,7 @@
     <div id="attack-btn-layout">
         <button id="attack-btn" onclick="attack(0)">Attack</button>
     </div>
+    <button type="button" class="stats-btn-layout" id="stats-btn">Stats</button>
     <div class="stats" id="eevee-stats">
         <h4>Eevee Stats</h4>
         <p>
@@ -41,16 +42,13 @@
     <div class="stats" id="pidge-stats">
         <h4>Pidgeotto Stats</h4>
         <p>
-            Hp: 55 <br>
+            Hp: 55p <br>
             Attack: 55 <br>
             Defense: 50 <br>
             Special Attack: 45 <br>
             Special Defense: 65 <br>
             Speed: 55
         </p>
-    </div>
-    <div id="stats-btn-layout">
-        <button type="button" id="stats-btn" onclick="stats()">Stats</button>
     </div>
     <script src="pokedex.js"></script>
 </body>
