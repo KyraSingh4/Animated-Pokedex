@@ -41,7 +41,7 @@ function choosePokemon(choose) {
 // function to show stats based on the Pokemon
 statsBtn = document.getElementById("stats-btn")
 statsBtn.addEventListener("click", () => {
-    document.getElementById("eevee-stats").style = "display:block"
+    document.getElementById("eevee-stats").style = "display:block" // test
 })
     
 
