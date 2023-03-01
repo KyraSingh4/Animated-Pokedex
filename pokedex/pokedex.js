@@ -16,36 +16,12 @@ function choosePokemon(choose) {
     } 
 }
 
-
-// function chooseEevee(iChooseYou) {
-//     document.getElementById("pidge").style = "display:none"
-//     if (iChooseYou == 0) {
-//         document.getElementById("eevee").style = "display:block"
-//         document.getElementById("eevee-stats").style = "margin-top: -490px"
-//     } else {
-//         document.getElementById("eevee").style = "display:none"
-//     }
-// }
-
-// function choosePidge(iChooseYou) {
-//     document.getElementById("eevee").style = "display:none"
-//     document.getElementById("eevee-stats").style = "display:none"
-//     if (iChooseYou == 0) {
-//         document.getElementById("pidge").style = 
-//         "display:block;"
-//     } else {
-//         document.getElementById("pidge").style = "display:none"
-//     }
-// }
-
 // function to show stats based on the Pokemon
 statsBtn = document.getElementById("stats-btn")
 statsBtn.addEventListener("click", () => {
     document.getElementById("eevee-stats").style = "display:block" // test
 })
     
-
-
 
 // changes the gif to attack gif
 function attack(attack) {
