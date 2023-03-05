@@ -3,24 +3,33 @@ document.getElementById("eevee-stats").style = "display:none"
 document.getElementById("pidge").style = "display:none"
 document.getElementById("pidge-stats").style = "display:none"
 
-var choose = null
+statsBtn = document.getElementById("stats-btn")
 
 // Choose a pokemon from the buttons
 function choosePokemon(choose) {
+    stats = document.getElementById("stats-btn")
     if (choose == eevee) {
         document.getElementById("pidge").style = "display:none"
         document.getElementById("eevee").style = "display:block"
+        stats.addEventListener("mousedown", () => {
+            document.getElementById("eevee-stats").style = "display:block"
+            document.getElementById("pidge-stats").style = "display:none"
+        })
+        stats.addEventListener("mouseup", () => {
+            document.getElementById("eevee-stats").style = "display:none"
+        })
     } else if (choose == pidge) {
         document.getElementById("eevee").style = "display:none"
         document.getElementById("pidge").style = "display:block"
+        stats.addEventListener("mousedown", () => {
+            document.getElementById("pidge-stats").style = "display:block" 
+            document.getElementById("eevee-stats").style = "display:none"
+        })
+        stats.addEventListener("mouseup", () => {
+            document.getElementById("pidge-stats").style = "display:none"
+        })
     } 
 }
-
-// function to show stats based on the Pokemon
-statsBtn = document.getElementById("stats-btn")
-statsBtn.addEventListener("click", () => {
-    document.getElementById("eevee-stats").style = "display:block" // test
-})
 
 // use .innerHTML to change stats?
     
