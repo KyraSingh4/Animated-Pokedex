@@ -21,6 +21,8 @@ statsBtn = document.getElementById("stats-btn")
 statsBtn.addEventListener("click", () => {
     document.getElementById("eevee-stats").style = "display:block" // test
 })
+
+// use .innerHTML to change stats?
     
 
 // changes the gif to attack gif
