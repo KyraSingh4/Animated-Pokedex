@@ -1,32 +1,37 @@
-document.getElementById("eevee").style = "display:none"
-document.getElementById("eevee-stats").style = "display:none"
-document.getElementById("pidge").style = "display:none"
-document.getElementById("pidge-stats").style = "display:none"
+let eevee = document.getElementById("eevee")
+let eeveeStats = document.getElementById("eevee-stats")
+let pidge = document.getElementById("pidge")
+let pidgeStats = document.getElementById("pidge-stats")
+let stats = document.getElementById("stats-btn")
+
+eevee.style = "display:none"
+eeveeStats.style = "display:none"
+pidge.style = "display:none"
+pidgeStats.style = "display:none"
 
 statsBtn = document.getElementById("stats-btn")
 
 // Choose a pokemon from the buttons
 function choosePokemon(choose) {
-    stats = document.getElementById("stats-btn")
     if (choose == eevee) {
-        document.getElementById("pidge").style = "display:none"
-        document.getElementById("eevee").style = "display:block"
+        pidge.style = "display:none"
+        eevee.style = "display:block"
         stats.addEventListener("mousedown", () => {
-            document.getElementById("eevee-stats").style = "display:block"
-            document.getElementById("pidge-stats").style = "display:none"
+            eeveeStats.style = "display:block"
+            pidgeStats.style = "display:none"
         })
         stats.addEventListener("mouseup", () => {
-            document.getElementById("eevee-stats").style = "display:none"
+            eeveeStats.style = "display:none"
         })
     } else if (choose == pidge) {
-        document.getElementById("eevee").style = "display:none"
-        document.getElementById("pidge").style = "display:block"
+        eevee.style = "display:none"
+        pidge.style = "display:block"
         stats.addEventListener("mousedown", () => {
-            document.getElementById("pidge-stats").style = "display:block" 
-            document.getElementById("eevee-stats").style = "display:none"
+            pidgeStats.style = "display:block" 
+            eeveeStats.style = "display:none"
         })
         stats.addEventListener("mouseup", () => {
-            document.getElementById("pidge-stats").style = "display:none"
+            pidgeStats.style = "display:none"
         })
     } 
 }
@@ -47,16 +52,16 @@ function attack(attack) {
         eeveeImage = "pokemon/eevee/eevee.gif"
         pidgeImage = "pokemon/pidgeotto/pidgeotto.webp"
     }
-    document.getElementById("eevee").src = eeveeImage
-    document.getElementById("pidge").src = pidgeImage
+    eevee.src = eeveeImage
+    pidge.src = pidgeImage
 }
 
 // changes from the attack gif to the idle gif
 function standStill() {
   eeveeImage = "pokemon/eevee/eevee.gif"
-  document.getElementById("eevee").src = eeveeImage
+  eevee.src = eeveeImage
   pidgeImage = "pokemon/pidgeotto/pidgeotto.webp"
-  document.getElementById("pidge").src = pidgeImage
+  pidge.src = pidgeImage
 }
 
 
