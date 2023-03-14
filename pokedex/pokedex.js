@@ -9,6 +9,7 @@ eeveeStats.style = "display:none"
 pidge.style = "display:none"
 pidgeStats.style = "display:none"
 
+
 statsBtn = document.getElementById("stats-btn")
 
 // Choose a pokemon from the buttons
